@@ -28,3 +28,10 @@ func RepoCreateTodo(t Todo) Todo {
 func RepoDestroyTodo(id string) {
 	delete(todos, id)
 }
+
+func RepoAllTodos() (loaded Todos) {
+	for _, todo := range todos {
+		loaded = append(loaded, todo)
+	}
+	return
+}

@@ -15,14 +15,9 @@ func Index(w http.ResponseWriter, r *http.Request) {
 }
 
 func TodoIndex(w http.ResponseWriter, r *http.Request) {
-	var loaded Todos
-	for _, todo := range todos {
-		loaded = append(loaded, todo)
-	}
-
 	w.Header().Set("Content-Type", "application/json;cahrset=UTF-8")
 	w.WriteHeader(http.StatusOK)
-	if err := json.NewEncoder(w).Encode(loaded); err != nil {
+	if err := json.NewEncoder(w).Encode(RepoAllTodos()); err != nil {
 		panic(err)
 	}
 }
@@ -53,12 +48,13 @@ func TodoCreate(w http.ResponseWriter, r *http.Request) {
 		if err := json.NewEncoder(w).Encode(err); err != nil {
 			panic(err)
 		}
+		return
 	}
 
-	t := RepoCreateTodo(todo)
+	RepoCreateTodo(todo)
 	w.Header().Set("Content-Type", "application/json;charset=UTF-8")
 	w.WriteHeader(http.StatusCreated)
-	if err := json.NewEncoder(w).Encode(t); err != nil {
+	if err := json.NewEncoder(w).Encode(RepoAllTodos()); err != nil {
 		panic(err)
 	}
 }
