@@ -1,24 +1,102 @@
-<!doctype html>
+<!DOCTYPE html>
+<!--[if IE 8]> <html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
 
-<html lang="en">
 <head>
   <meta charset="utf-8">
-
+  <meta name="viewport" content="width=device-width">
   <title>TODOs</title>
-  <meta name="description" content="Basic TODO application">
-  <meta name="author" content="Chris marshall">
+  <meta name="author" content="ChrisMar035">
+  <meta name="description" content="TODOs: done.">
+  <link rel="stylesheet" href="assets/css/foundation.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="shortcut icon" href="/assets/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="/assets/favicon.ico" type="image/x-icon">
+</head>
+<body>
+
+	<bordercolor></bordercolor>
+	<div class="row">
+		<div class="animated fadeInLeft">
+		<div class="large-3 columns">
+			<logo>
+        <h1 id="logo-text">TOD<span id="the-o">O</a></h1>
+			</logo>
+		</div><!-- 3 columns -->
+		</div><!-- animation -->
+
+		<!-- Responsive Drop Down Menu -->
+		<script src="assets/js/vendor/jquery.js" type="text/javascript"></script>
+		<script src="assets/js/make_dropdown.min.js" type="text/javascript"></script>
+		<script type="text/javascript">
+		$(document).ready(function(){	$('#menubar > li').make_dropdown(); });
+		</script>
+		<!-- Responsive Drop Down Menu -->
+
+		<div class="large-9 columns">
+			<ul id="menubar">
+				<li><a href="#" id="active">Home</a></li>
+			</ul>
+		</div><!-- 9 columns -->
+	</div><!-- row -->
+
+	<div class="animated fadeInUp">
+	<div class="row">
+		<div class="large-12 columns">
+      <h2>Stuff here</h2>
+		</div><!-- 12 columns -->
+	</div><!-- row -->
+	</div><!-- animation -->
+
+	<footer>
+	<div class="row">
+		<div class="large-4 columns">
+			<h4>About us</h4>
+			<p>
+        Making all you TODOs, done.
+      </p>
+			<p>&#8962; 123 Street Name, Cleveland, USA<br />&#9010; chris@chrismar035.com</p><br>
+			<a href="https://twitter.com/chrimar035" class="social twitter">t</a>
+			<a href="https://facebook.com/chrismar035" class="social facebook">f</a>
+			<a href="https://plus.google.com/+ChrisMarshall035" class="social google">g+</a>
+		</div>
+		<div class="large-4 columns">
+			<h4>Instagram</h4>
+			<iframe src="http://snapwidget.com/in/?u=aW5zdGFncmFtfGlufDcwfDN8Mnx8bm98OHxmYWRlSW4=" allowTransparency="true" frameborder="0" scrolling="no" style="border:none; overflow:hidden; width:234px; height: 156px" ></iframe>
+		</div>
+		<div class="large-4 columns">
+			<h4>Mini Feature</h4>
+			<p>You can put these mini-features in any widget ready area. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+			<a href="#" class="radius button">Button Text</a>
+		</div>
+	</div>
+	<div class="row">
+		<div class="large-12 columns">
+			<foot>
+				Copyright © 2015 by Zero · Design by <a href="http://guglielmopardo.me"><img src="assets/img/guglielmoBLUE.png" alt="" /></a>
+			</foot>
+		</div>
+	</div>
+	</footer>
+
+  <script>
+  document.write('<script src=' +
+  ('__proto__' in {} ? 'assets/js/vendor/zepto' : 'assets/js/vendor/jquery') +
+  '.js><\/script>')
+  </script>
+  <script src="assets/js/foundation.min.js"></script>
+
 
   <!--
-  <link rel="stylesheet" href="assets/css/styles.css?v=1.0">
+  <script src="assets/js/foundation/foundation.js"></script>
+  <script src="assets/js/foundation/foundation.dropdown.js"></script>
+  <script src="assets/js/foundation/foundation.alerts.js"></script>
+  <script src="assets/js/foundation/foundation.clearing.js"></script>
+  <script src="assets/js/foundation/foundation.orbit.js"></script>
   -->
 
-  <!--[if lt IE 9]>
-  <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-  <![endif]-->
-</head>
-
-<body>
-  <h1>Hello, world!</h1>
-  <script src="assets/js/alert.js"></script>
+  <script>
+    $(document).foundation();
+  </script>
 </body>
 </html>
