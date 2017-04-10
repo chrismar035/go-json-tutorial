@@ -75,9 +75,9 @@ var TaskList = React.createClass({
       );
     });
     return (
-      <div className="taskList">
+      <ul className="taskList">
         {taskNodes}
-      </div>
+      </ul>
     );
   }
 });
@@ -85,11 +85,11 @@ var TaskList = React.createClass({
 var Task = React.createClass({
   render: function() {
     return (
-      <div className="task">
+      <li className="task">
         <div className="taskName">
           {this.props.name}
         </div>
-      </div>
+      </li>
     );
   }
 });
